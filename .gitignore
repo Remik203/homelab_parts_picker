@@ -218,3 +218,52 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# =====================================================================
+# Projekt: scraper OLX/Allegro -> SQLite (homelab listings)
+# =====================================================================
+
+# Sekrety / konfiguracja lokalna (wzorzec z .env.example zostaje w repo)
+.env.*
+!.env.example
+
+# Baza danych i pliki pomocnicze SQLite (zawiera opisy ogłoszeń osób trzecich)
+data/*
+!data/.gitkeep
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Logi, zrzuty odpowiedzi API, debug
+logs/
+*.log
+debug/
+raw_responses/
+*.har
+
+# Pobrane zdjęcia / cache (nie scrapujemy zdjęć do repo)
+images/
+cache/
+.cache/
+
+# Eksporty i notatki robocze
+exports/
+*.csv
+*.xlsx
+scratch/
+notes_local/
+
+# Lokalna Ollama / modele / bazy offline (np. PassMark) - duże, pobierane osobno
+*.gguf
+*.safetensors
+passmark*.csv
+passmark*.json
+
+# System / IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
